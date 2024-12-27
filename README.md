@@ -17,6 +17,8 @@ This repository provides a fully functioning Jeopardy game that runs in the brow
 ### Setup
 1. Run <code>npm install</code> from root of the project
 2. Run <code>npm run build</code> from the root of the project
+3. Board questions are provided from the questions.json file or provided from the env via VITE_JEOPARDY_QUESTIONS
+4. Final Jeopardy question is provided from finalJeopardy.json or provided from the the env via VITE_FINAL_JEOPARDY_QUESTION
 
 ## Play
 
