@@ -1,0 +1,248 @@
+[
+    {
+        "category": "Disney Villains",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "This character, cursed by a powerful sorceress, is doomed to remain in a monstrous form unless he can earn the love of another before the last petal falls.",
+                "answer": "Who is the Beast?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This sea witch, seeking revenge on the king who banished her, transforms a mermaid princess into a human and attempts to steal her voice.",
+                "answer": "Who is Ursula?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "The antagonist in The Black Cauldron seeks the magical Cauldron to raise an army of undead warriors to conquer the world.",
+                "answer": "Who is The Horned King?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This character, once a friend of Peter Pan, grows bitter and jealous, later becoming the main villain in Peter Pan.",
+                "answer": "Who is Captain Hook?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "This ancient being, the ruler of a dark kingdom, is obsessed with creating a portal to the mortal world in The Princess and the Frog.",
+                "answer": "Who is Dr. Facilier?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Bible Stories",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "The Ten Commandments were given to Moses on this mountain.",
+                "answer": "What is Mount Sinai?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This judge of Israel defeated an army with 300 men using trumpets, jars, and torches.",
+                "answer": "Who is Gideon?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "This Babylonian king saw writing on the wall during a banquet.",
+                "answer": "Who is Belshazzar?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This prophet was thrown into a cistern by King Zedekiah's officials.",
+                "answer": "Who is Jeremiah?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "The shortest verse in the Bible is found in this Gospel.",
+                "answer": "What is the Gospel of John?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Famous Inventions",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "Alexander Graham Bell is credited with inventing this communication device in 1876.",
+                "answer": "What is the telephone?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This physicist developed the first practical incandescent light bulb.",
+                "answer": "Who is Thomas Edison?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "Johannes Gutenberg invented this device, revolutionizing the spread of knowledge in the 15th century.",
+                "answer": "What is the printing press?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This medical breakthrough, discovered by Alexander Fleming, is considered the first antibiotic.",
+                "answer": "What is penicillin?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "The Wright brothers flew the first powered aircraft in this U.S. state.",
+                "answer": "What is North Carolina?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Famous Authors",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "This children's author created characters like the Cat in the Hat and the Grinch.",
+                "answer": "Who is Dr. Seuss?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This British author wrote the detective stories featuring Sherlock Holmes.",
+                "answer": "Who is Arthur Conan Doyle?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "This American poet wrote, 'I celebrate myself, and sing myself' in Leaves of Grass.",
+                "answer": "Who is Walt Whitman?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "Known for Pride and Prejudice, she published her novels anonymously during her lifetime.",
+                "answer": "Who is Jane Austen?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "This author of Frankenstein was only 18 years old when she began writing the novel.",
+                "answer": "Who is Mary Shelley?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Movie Villains (Non-Disney)",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "This ruthless German officer, played by Christoph Waltz, is the primary antagonist in Inglourious Basterds, known for his terrifying interrogation methods.",
+                "answer": "Who is Colonel Hans Landa?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This character from The Silence of the Lambs is a cannibalistic serial killer with a penchant for psychological manipulation.",
+                "answer": "Who is Hannibal Lecter?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "The cold and calculating villain from The Terminator is a cyborg assassin sent from the future to kill Sarah Connor.",
+                "answer": "Who is The Terminator (T-800)?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This villain from The Usual Suspects is a master manipulator and criminal mastermind whose true identity is revealed at the end of the film.",
+                "answer": "Who is Keyser Söze?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "This calculating and manipulative villain in Se7en is a detective who uses the seven deadly sins to execute a series of brutal murders. ",
+                "answer": "Who is John Doe?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Harry Potter",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "This boy wizard with a lightning-shaped scar made his first appearance in 1997.",
+                "answer": "Who is Harry Potter?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "The spell 'Alohomora' is used to perform this handy magical trick.",
+                "answer": "What is unlocking doors?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "This magical item, known as the Philosopher's Stone in the UK, grants immortality and turns metal into gold.",
+                "answer": "What is the Sorcerer’s Stone?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "The Triwizard Tournament brought together students from Hogwarts, Durmstrang, and this third wizarding school.",
+                "answer": "What is Beauxbatons?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "This potion allows the drinker to temporarily take on the appearance of someone else.",
+                "answer": "What is Polyjuice Potion?",
+                "isDailyDouble": false
+            }
+        ]
+    }
+]

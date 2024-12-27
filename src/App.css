@@ -1,0 +1,374 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #110a5b;
+  color: white;
+}
+
+.App {
+  text-align: center;
+}
+
+.team1-scores {
+  display: flex;
+  margin-bottom: -75px;
+  justify-content: left;
+  padding: 10px 102px 0px;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.team2-scores {
+  display: flex;
+  justify-content:right;
+  padding: 10px 102px 7px;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.team1-score {
+  background-color: #102e69;
+  padding: 10px 50px 0px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.team2-score {
+  background-color: #102e69;
+  padding: 10px 50px 0px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/* Header */
+.jeopardy-header {
+  background: #110a5b;
+  background-color: #110a5b;
+  color: white;
+  padding: 1px;
+}
+
+.jeopardy-logo {
+  object-fit: scale-down;
+  object-position: center;
+  height: 234px;
+  width: 630px;
+}
+
+
+/* Jeopardy Board */
+.jeopardy-board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 5px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #000000;
+  border: 5px solid #000000;
+}
+
+.category-column {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.category-header {
+  background-color: #000099;
+  color: #fff;
+  height: 45px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #000;
+  text-align: center;
+}
+
+.clue {
+  background-image: url('/main_logo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-color: #000099;
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff00;
+  height: 35px;
+  width: 140px;
+  padding: 20px;
+  border: 2px solid #000;
+  cursor: pointer;
+  text-align: center;
+}
+
+.clue:hover {
+  background-color: #003399;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 72, 72, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #000099;
+  color: #ffffff;
+  padding: 20px;
+  width: 75%;
+  height: 50%;
+  border: 2px solid #FFFF00;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content h1 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-top: 100px;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.modal-content button {
+  background-color: #0000FF;
+  color: #FFFF00;
+  border: 2px solid #0000FF;
+  box-shadow: 0px 2px 9px #ffffff;
+  margin: 10px;
+  margin-top: 5%;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 72, 72, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.daily-double-modal {
+  z-index: 1200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daily-double-modal-content {
+  z-index: 1200;
+  background-color: #000099;
+  color: #ffffff;
+  padding: 20px;
+  width: 95%;
+  height: 95%;
+  border: 2px solid #FFFF00;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.final-jeopardy-modal {
+  z-index: 1200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.final-jeopardy-modal-content {
+  z-index: 1200;
+  background-color: #000099;
+  color: #ffffff;
+  padding: 20px;
+  width: 95%;
+  height: 95%;
+  border: 2px solid #FFFF00;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.final-jeopardy-modal-content button {
+  background-color: #0000FF;
+  color: #FFFF00;
+  border: 2px solid #0000FF;
+  box-shadow: 0px 2px 9px #ffffff;
+  margin: 10px;
+  margin-top: -10px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.final-jeopardy-modal-content p {
+  margin-top: 250px;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.final-jeopardy-modal-content h1 {
+  margin-bottom: 10px;
+}
+
+.final-jeopardy-response-area1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 5px;
+  max-width: 100px;
+  max-height: 30px;
+  margin: auto;
+  margin-bottom: 55px;
+  background-color: #000099;
+  border: 3px solid #FFFF00;
+}
+
+.final-jeopardy-response-area1 button {
+  background-color: #0000FF;
+  color: #FFFF00;
+  border: 2px solid #0000FF;
+  box-shadow: 0px 2px 9px #ffffff;
+  width: 90px;
+  margin: 10px;
+  margin-top: -10px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.final-jeopardy-response-area2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 5px;
+  max-width: 100px;
+  max-height: 30px;
+  margin: auto;
+  background-color: #000099;
+  border: 3px solid #FFFF00;
+}
+
+.final-jeopardy-response-area2 button {
+  background-color: #0000FF;
+  color: #FFFF00;
+  border: 2px solid #0000FF;
+  box-shadow: 0px 2px 9px #ffffff;
+  width: 90px;
+  margin: 10px;
+  margin-top: -10px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.final-jeopardy-response-area1 input {
+  display: flex;
+  max-width: 92px;
+  max-height: 25px;
+  background-color: #ffffff;
+}
+
+.final-jeopardy-response-area2 input {
+  display: flex;
+  max-width: 92px;
+  max-height: 25px;
+  background-color: #ffffff;
+}
+
+
+.daily-double-response-area1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 5px;
+  max-width: 100px;
+  max-height: 30px;
+  margin-left: 40px;
+  margin-bottom: 55px;
+  background-color: #000099;
+  border: 3px solid #FFFF00;
+}
+
+.daily-double-response-area1 button {
+  background-color: #0000FF;
+  color: #FFFF00;
+  border: 2px solid #0000FF;
+  box-shadow: 0px 2px 9px #ffffff;
+  width: 90px;
+  margin: 10px;
+  margin-top: -10px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.daily-double-response-area2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 5px;
+  max-width: 100px;
+  max-height: 30px;
+  margin: -100px;
+  margin-left: 540px;
+  background-color: #000099;
+  border: 3px solid #FFFF00;
+}
+
+.daily-double-response-area2 button {
+  background-color: #0000FF;
+  color: #FFFF00;
+  border: 2px solid #0000FF;
+  box-shadow: 0px 2px 9px #ffffff;
+  width: 90px;
+  margin: 10px;
+  margin-top: -10px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.daily-double-response-area1 input {
+  display: flex;
+  max-width: 92px;
+  max-height: 25px;
+  background-color: #ffffff;
+}
+
+.daily-double-response-area2 input {
+  display: flex;
+  max-width: 92px;
+  max-height: 25px;
+  background-color: #ffffff;
+}
