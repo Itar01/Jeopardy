@@ -28,14 +28,18 @@ export function SeedDailyDouble() {
   QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble = true;
 };
 
-export function HandleDailyDoubleWager(team, wager, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, team1Score, team2Score) {
+export function HandleDailyDoubleWager(team, wager, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, team1Score, team2Score, clueValue) {
   if(team === 1) {
     if(wager <= team1Score) {
       setTeam1DailyDoubleWager(parseInt(wager));
+    } else if(team1Score <= 0) {
+      setTeam1DailyDoubleWager(parseInt(clueValue));
     }
   } else {
     if(wager <= team2Score) {
       setTeam2DailyDoubleWager(parseInt(wager));
+    } else if(team2Score <= 0) {
+      setTeam2DailyDoubleWager(parseInt(clueValue));
     }
   }
 };

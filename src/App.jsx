@@ -146,7 +146,7 @@ export default function App() {
           <div className="modal">
             <div className="modal-content">
               <GetQuestionForClue currentValue={selectedClue} currentCategory={selectedCategory}  />
-              <RenderClueControls closeWindow={() => closeModal()} isDailyDoubleActive={dailyDoubleControls} currentClue={selectedClue}  team1CurrentScore={team1Score} team2CurrentScore={team2Score}  increaseScore={(team, value, clueActions, enableDailyDouble) => handleIncreaseScore(team, value, clueActions, enableDailyDouble)} decreaseScore={(team, value, clueActions, enableDailyDouble) => handleDecreaseScore(team, value, clueActions, enableDailyDouble)} />
+              <RenderClueControls currentValue={selectedClue} closeWindow={() => closeModal()} isDailyDoubleActive={dailyDoubleControls} currentClue={selectedClue}  team1CurrentScore={team1Score} team2CurrentScore={team2Score}  increaseScore={(team, value, clueActions, enableDailyDouble) => handleIncreaseScore(team, value, clueActions, enableDailyDouble)} decreaseScore={(team, value, clueActions, enableDailyDouble) => handleDecreaseScore(team, value, clueActions, enableDailyDouble)} />
             </div>
           </div>
         )}

@@ -20,10 +20,14 @@ export default function FinalJeopardy(props) {
         if(team === 1) {
           if(wager <= props.team1CurrentScore) {
             setTeam1FinalWager(parseInt(wager));
+          } else {
+            setTeam1FinalWager(0);
           }
         } else {
           if(wager <= props.team2CurrentScore) {
             setTeam2FinalWager(parseInt(wager));
+          } else {
+            setTeam2FinalWager(0);
           }
         }
     };

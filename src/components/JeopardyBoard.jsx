@@ -112,12 +112,12 @@ export function RenderClueControls(props) {
   return props.isDailyDoubleActive ? (
     <>
       <div className="daily-double-response-area1">
-        <input id="team1-daily-double-response" type="text" value={team1DailyDoubleWager > 0 ? team1DailyDoubleWager : ""} onChange={(wagerInput) => HandleDailyDoubleWager(1, wagerInput.target.value, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, props.team1CurrentScore, props.team2CurrentScore)}/>
+        <input id="team1-daily-double-response" type="text" value={team1DailyDoubleWager > 0 ? team1DailyDoubleWager : ""} onChange={(wagerInput) => HandleDailyDoubleWager(1, wagerInput.target.value, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, props.team1CurrentScore, props.team2CurrentScore, props.currentValue)}/>
         <button onClick={() => { props.increaseScore(1, parseInt(team1DailyDoubleWager), false, true); }}>Team 1 Correct</button>
         <button onClick={() => { props.decreaseScore(1, parseInt(team1DailyDoubleWager), false, true); }}>Team 1 Incorrect</button>
       </div>
       <div className="daily-double-response-area2">
-        <input id="team2-daily-double-response" type="text" value={team2DailyDoubleWager > 0 ? team2DailyDoubleWager : ""} onChange={(wagerInput) => HandleDailyDoubleWager(2, wagerInput.target.value, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, props.team1CurrentScore, props.team2CurrentScore)}/>
+        <input id="team2-daily-double-response" type="text" value={team2DailyDoubleWager > 0 ? team2DailyDoubleWager : ""} onChange={(wagerInput) => HandleDailyDoubleWager(2, wagerInput.target.value, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, props.team1CurrentScore, props.team2CurrentScore, props.currentValue)}/>
         <button onClick={() => { props.increaseScore(2, parseInt(team2DailyDoubleWager), false, true); }}>Team 2 Correct</button>
         <button onClick={() => { props.decreaseScore(2, parseInt(team2DailyDoubleWager), false, true); }}>Team 2 Incorrect</button>
       </div>
