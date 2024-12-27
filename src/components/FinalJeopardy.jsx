@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "../App.css";
 import finalJeopardyAudio from "../final_jeopardy.mp3";
-import finalJeopardyQuestion from '../finalJeopardy.json';
+import { FINAL_JEOPARDY_QUESTION } from "../Constants";
 
 export default function FinalJeopardy(props) {
     const [thinkMusicPlaying, setThinkMusicPlaying] = useState(false);
     const [team1FinalWager, setTeam1FinalWager] = useState(0);
     const [team2FinalWager, setTeam2FinalWager] = useState(0);
-    
-    const FINAL_JEOPARDY = import.meta.env.VITE_FINAL_JEOPARDY_QUESTION ? JSON.parse(import.meta.env.VITE_FINAL_JEOPARDY_QUESTION) : finalJeopardyQuestion;
 
     if (!thinkMusicPlaying === true) {
         const thinkMusic = new Audio(finalJeopardyAudio);
@@ -35,8 +33,8 @@ export default function FinalJeopardy(props) {
     return (
         <div className="final-jeopardy-modal">
             <div className="final-jeopardy-modal-content">
-                <h1>{FINAL_JEOPARDY.category}</h1>
-                <p>{FINAL_JEOPARDY.question}</p>
+                <h1>{FINAL_JEOPARDY_QUESTION.category}</h1>
+                <p>{FINAL_JEOPARDY_QUESTION.question}</p>
                 <div className="final-jeopardy-response-area1">
                     <input id="team1-final-response" type="text" value={team1FinalWager > 0 ? team1FinalWager : ""} onChange={(wagerInput) => handleFinalJeopardyWager(1, wagerInput.target.value)} />
                     <button onClick={() => props.onIncrease(1, team1FinalWager, false)}>Team 1 Correct</button>
