@@ -21,3 +21,7 @@ This repository provides a fully functioning Jeopardy game that runs in the brow
 ## Play
 
 - Run <code>npm run dev</code> to start the game
+
+## Legal Disclaimer
+
+This project is not affiliated with, endorsed by, or in any way associated with the official Jeopardy! television show, its producers, or its owners. All trademarks, service marks, trade names, trade dress, product names, and logos appearing in this project are the property of their respective owners. This project is intended for educational and entertainment purposes only and is not for profit.
