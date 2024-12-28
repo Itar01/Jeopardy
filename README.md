@@ -4,6 +4,7 @@
 This repository provides a fully functioning Jeopardy game that runs in the browser.
 
 ## Features
+ - Jeopardy and Double Jeopardy rounds
  - Scoreboard for Team 1 and Team 2
  - Daily Double with option to wager points
  - Final Jeopardy with option to wager points
