@@ -1,0 +1,242 @@
+[
+    {
+        "category": "Space Exploration",
+        "questions": [
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This was the first human-made satellite launched into orbit by the Soviet Union in 1957.",
+                "answer": "What is Sputnik 1?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This NASA program successfully landed the first humans on the Moon in 1969.",
+                "answer": "What is Apollo?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1200,
+                "fontColor": "#f5de50",
+                "question": "The first American astronaut to orbit the Earth in 1962 was this man.",
+                "answer": "Who is John Glenn?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1600,
+                "fontColor": "#f5de50",
+                "question": "This space telescope, launched in 1990, has provided some of the most detailed images of distant galaxies.",
+                "answer": "What is the Hubble Space Telescope?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 2000,
+                "fontColor": "#f5de50",
+                "question": "This spacecraft, launched in 1977, is the farthest human-made object from Earth.",
+                "answer": "What is Voyager 1?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "World Capitals",
+        "questions": [
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "The capital of Japan, this city is known for its blend of traditional culture and cutting-edge technology.",
+                "answer": "What is Tokyo?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This South American capital is home to Christ the Redeemer, one of the New Seven Wonders of the World.",
+                "answer": "What is Brasília?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1200,
+                "fontColor": "#f5de50",
+                "question": "This European capital city is divided by the River Danube and consists of Buda and Pest.",
+                "answer": "What is Budapest?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1600,
+                "fontColor": "#f5de50",
+                "question": "This is the capital of Kenya and a hub for wildlife tourism.",
+                "answer": "What is Nairobi?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 2000,
+                "fontColor": "#f5de50",
+                "question": "This island nation's capital, Reykjavik, is known for its geothermal activity.",
+                "answer": "What is Iceland?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Classical Music",
+        "questions": [
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "Known as the 'King of Instruments,' this musical instrument is often found in churches.",
+                "answer": "What is the organ?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This composer of the Ninth Symphony was completely deaf when he wrote it.",
+                "answer": "Who is Ludwig van Beethoven?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1200,
+                "fontColor": "#f5de50",
+                "question": "This famous Russian composer wrote The Nutcracker Suite.",
+                "answer": "Who is Pyotr Tchaikovsky?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1600,
+                "fontColor": "#f5de50",
+                "question": "This Italian composer is known for operas like La Traviata and Aida.",
+                "answer": "Who is Giuseppe Verdi?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 2000,
+                "fontColor": "#f5de50",
+                "question": "This Baroque composer of The Four Seasons was nicknamed 'The Red Priest.'",
+                "answer": "Who is Antonio Vivaldi?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Historic Battles",
+        "questions": [
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "The Battle of Hastings in 1066 saw this leader defeat King Harold II.",
+                "answer": "Who is William the Conqueror?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This decisive naval battle during World War II was a turning point in the Pacific Theater.",
+                "answer": "What is the Battle of Midway?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1200,
+                "fontColor": "#f5de50",
+                "question": "The Hundred Years' War saw this French heroine lead forces to lift the Siege of Orléans.",
+                "answer": "Who is Joan of Arc?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1600,
+                "fontColor": "#f5de50",
+                "question": "This 1815 battle marked the final defeat of Napoleon Bonaparte.",
+                "answer": "What is the Battle of Waterloo?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 2000,
+                "fontColor": "#f5de50",
+                "question": "This battle in 480 BC saw 300 Spartans fight to the death against a Persian army.",
+                "answer": "What is the Battle of Thermopylae?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Technology Today",
+        "questions": [
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This tech giant is known for products like the iPhone and MacBook.",
+                "answer": "What is Apple?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This social media platform, now owned by Elon Musk, was rebranded as X.",
+                "answer": "What is Twitter?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1200,
+                "fontColor": "#f5de50",
+                "question": "This company developed ChatGPT, an advanced AI model for natural language processing.",
+                "answer": "What is OpenAI?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1600,
+                "fontColor": "#f5de50",
+                "question": "This type of computing uses qubits instead of classical bits.",
+                "answer": "What is quantum computing?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 2000,
+                "fontColor": "#f5de50",
+                "question": "This technology, abbreviated as VR, immerses users in a digital environment.",
+                "answer": "What is virtual reality?",
+                "isDailyDouble": false
+            }
+        ]
+    },
+    {
+        "category": "Mythical Creatures",
+        "questions": [
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "This fire-breathing creature from European folklore is often depicted guarding treasure.",
+                "answer": "What is a dragon?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "This creature from Greek mythology has the body of a lion, the head of a human, and the wings of an eagle.",
+                "answer": "What is a sphinx?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1200,
+                "fontColor": "#f5de50",
+                "question": "This legendary one-eyed giant appears in Homer's Odyssey.",
+                "answer": "What is a Cyclops?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1600,
+                "fontColor": "#f5de50",
+                "question": "This serpent-haired creature could turn onlookers to stone.",
+                "answer": "Who is Medusa?",
+                "isDailyDouble": false
+            },
+            {
+                "points": 2000,
+                "fontColor": "#f5de50",
+                "question": "This Norse wolf is foretold to kill Odin during Ragnarok.",
+                "answer": "Who is Fenrir?",
+                "isDailyDouble": false
+            }
+        ]
+    }
+]

@@ -18,7 +18,8 @@ export default function App() {
   const [video, setVideo] = useState(true);
   const [dailyDouble, setDailyDouble] = useState(false);
   const [dailyDoubleControls, setDailyDoubleControls] = useState(false);
-  const [questionsAnswered, setQuestionsAnswered] = useState(false);
+  const [round1Finished, setRound1Finished] = useState(false);
+  const [round2Finished, setRound2Finished] = useState(false);
   const [isFinalJeopardy, setIsFinalJeopardy] = useState(false);
   const [clueCount, setClueCount] = useState(0);
   // #endregion Constants
@@ -43,14 +44,29 @@ export default function App() {
   }, [team1Score, team2Score]);
 
   useEffect(() => {
-    if (!video) {
-      InitBoard();
-      SeedDailyDouble();
+    if (!video || round1Finished === true) {
+
+      if(round1Finished === true) {
+        document.querySelectorAll('.clue').forEach(clue => {
+          clue.style.backgroundImage = 'url("/double_jeopardy.png")';
+          clue.style.color = "#ffffff00"
+        });
+
+        setTimeout(() => {
+          InitBoard(round1Finished);
+          SeedDailyDouble(round1Finished);
+        }, 2500)
+      } else {
+        setTimeout(() => {
+          InitBoard(round1Finished);
+          SeedDailyDouble(round1Finished);
+        }, 1500)
+      }
     }
-  }, [video]);
+  }, [video, round1Finished]);
 
   useEffect(() => {
-    if (selectedClue && GetDailyDoubleDecision(selectedCategory, selectedClue).isDailyDouble) {
+    if (selectedClue && GetDailyDoubleDecision(selectedCategory, selectedClue, round1Finished)?.isDailyDouble) {
       setDailyDouble(true);
       setDailyDoubleControls(true);
     }
@@ -60,7 +76,7 @@ export default function App() {
 
   // #region Board Management
   const closeModal = () => {
-    HandleDisableClue(categoryIndex, clueIndex, clueCount, setQuestionsAnswered);
+    HandleDisableClue(categoryIndex, clueIndex, clueCount, setRound1Finished, setRound2Finished);
     setCategoryIndex(null);
     setClueIndex(null);
     setSelectedCategory(null);
@@ -98,7 +114,7 @@ export default function App() {
     }
 
     if(performClueActions) {
-      HandleDisableClue(categoryIndex, clueIndex, clueCount, setQuestionsAnswered);
+      HandleDisableClue(categoryIndex, clueIndex, clueCount, setRound1Finished, setRound2Finished);
       setCategoryIndex(null);
       setClueIndex(null);
       setSelectedCategory(null);
@@ -123,7 +139,7 @@ export default function App() {
     }
 
     if(performClueActions) {
-      HandleDisableClue(categoryIndex, clueIndex, clueCount, setQuestionsAnswered);
+      HandleDisableClue(categoryIndex, clueIndex, clueCount, setRound1Finished, setRound2Finished);
       setCategoryIndex(null);
       setClueIndex(null);
       setSelectedCategory(null);
@@ -140,12 +156,12 @@ export default function App() {
       {isFinalJeopardy && <FinalJeopardy team1CurrentScore={team1Score} team2CurrentScore={team2Score} disableFinalJeopardy={() => setIsFinalJeopardy(false)} onIncrease={(team, finalWager, performActions) => handleIncreaseScore(team, finalWager, performActions)} onDecrease={(team, finalWager, performActions) => handleDecreaseScore(team, finalWager, performActions)}/>}
 
       <div className="App">
-        <JeopardyHeader team1CurrentScore={team1Score} team2CurrentScore={team2Score} boardEmpty={questionsAnswered} activateFinalJeopardy={(state) => setIsFinalJeopardy(state)}/>
-        <JeopardyBoard processClue={(category, value, catIndex, clueIndex) => handleClueClick(category, value, catIndex, clueIndex)}/>
+        <JeopardyHeader team1CurrentScore={team1Score} team2CurrentScore={team2Score} round1BoardEmpty={round1Finished} round2BoardEmpty={round2Finished} activateFinalJeopardy={(state) => setIsFinalJeopardy(state)}/>
+        <JeopardyBoard round1Done={round1Finished} processClue={(category, value, catIndex, clueIndex) => handleClueClick(category, value, catIndex, clueIndex)}/>
         {selectedClue && (
           <div className="modal">
             <div className="modal-content">
-              <GetQuestionForClue currentValue={selectedClue} currentCategory={selectedCategory}  />
+              <GetQuestionForClue round1Done={round1Finished} currentValue={selectedClue} currentCategory={selectedCategory}  />
               <RenderClueControls currentValue={selectedClue} closeWindow={() => closeModal()} isDailyDoubleActive={dailyDoubleControls} currentClue={selectedClue}  team1CurrentScore={team1Score} team2CurrentScore={team2Score}  increaseScore={(team, value, clueActions, enableDailyDouble) => handleIncreaseScore(team, value, clueActions, enableDailyDouble)} decreaseScore={(team, value, clueActions, enableDailyDouble) => handleDecreaseScore(team, value, clueActions, enableDailyDouble)} />
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import dailyDoubleVideo from "../Daily_Double.mp4";
-import { QUESTIONS, CLUES, CATEGORIES } from "../Constants";
+import { JEOPARDY_QUESTIONS, CLUES, CLUES2, JEOPARDY_CATEGORIES, DOUBLE_JEOPARDY_CATEGORIES, DOUBLE_JEOPARDY_QUESTIONS } from "../Constants";
 
 export function DailyDoubleVideo(props) {
     return (
@@ -11,21 +11,30 @@ export function DailyDoubleVideo(props) {
     )
 };
 
-export function SeedDailyDouble() {
+export function SeedDailyDouble(isDoubleJeopardy) {
   let randomCategoryIndex, randomClueIndex, randomCategoryIndex2, randomClueIndex2;
   do {
-    randomCategoryIndex = Math.floor(Math.random() * CATEGORIES.length);
+    randomCategoryIndex = Math.floor(Math.random() * JEOPARDY_CATEGORIES.length);
     randomClueIndex = Math.floor(Math.random() * CLUES[randomCategoryIndex].length);
-  } while (QUESTIONS[randomCategoryIndex].questions[randomClueIndex].isDailyDouble);
+  } while (JEOPARDY_QUESTIONS[randomCategoryIndex].questions[randomClueIndex].isDailyDouble);
 
-  QUESTIONS[randomCategoryIndex].questions[randomClueIndex].isDailyDouble = true;
+  JEOPARDY_QUESTIONS[randomCategoryIndex].questions[randomClueIndex].isDailyDouble = true;
 
-  do {
-    randomCategoryIndex2 = Math.floor(Math.random() * CATEGORIES.length);
-    randomClueIndex2 = Math.floor(Math.random() * CLUES[randomCategoryIndex2].length);
-  } while (QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble);
+  if(isDoubleJeopardy === true) {
+    do {
+      randomCategoryIndex2 = Math.floor(Math.random() * DOUBLE_JEOPARDY_CATEGORIES.length);
+      randomClueIndex2 = Math.floor(Math.random() * CLUES2[randomCategoryIndex2].length);
+    } while (DOUBLE_JEOPARDY_QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble);
 
-  QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble = true;
+    DOUBLE_JEOPARDY_QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble = true;
+
+    do {
+      randomCategoryIndex2 = Math.floor(Math.random() * DOUBLE_JEOPARDY_CATEGORIES.length);
+      randomClueIndex2 = Math.floor(Math.random() * CLUES2[randomCategoryIndex2].length);
+    } while (DOUBLE_JEOPARDY_QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble);
+
+    DOUBLE_JEOPARDY_QUESTIONS[randomCategoryIndex2].questions[randomClueIndex2].isDailyDouble = true;
+  }
 };
 
 export function HandleDailyDoubleWager(team, wager, setTeam1DailyDoubleWager, setTeam2DailyDoubleWager, team1Score, team2Score, clueValue) {
@@ -44,14 +53,23 @@ export function HandleDailyDoubleWager(team, wager, setTeam1DailyDoubleWager, se
   }
 };
 
-export function GetDailyDoubleDecision(selectedCategory, selectedClue) {
+export function GetDailyDoubleDecision(selectedCategory, selectedClue, isRound1Finished) {
 
   const getQuestion = () => {
-    let chosenQuestion;
-    const categoryQuestions = QUESTIONS.find(q => q.category === selectedCategory);
-    if (categoryQuestions) {
-      chosenQuestion = categoryQuestions.questions.find(q => q.points === selectedClue);
+    let chosenQuestion, categoryQuestions;
+
+    if(isRound1Finished === true) {
+      categoryQuestions = DOUBLE_JEOPARDY_QUESTIONS.find(q => q.category === selectedCategory);
+      if (categoryQuestions) {
+        chosenQuestion = categoryQuestions.questions.find(q => q.points === selectedClue);
+      }
+    } else {
+      categoryQuestions = JEOPARDY_QUESTIONS.find(q => q.category === selectedCategory);
+      if (categoryQuestions) {
+        chosenQuestion = categoryQuestions.questions.find(q => q.points === selectedClue);
+      }
     }
+
     return chosenQuestion;
   }
 

@@ -4,9 +4,9 @@ import "../App.css";
 export default function JeopardyHeader(props) {
     return (
         <header className="jeopardy-header">
-            {props.boardEmpty ? 
+            {props.round2BoardEmpty ? 
             (<img src="/final_jeopardy.jpg" alt="Jeopardy Logo" className="jeopardy-logo" onClick={() => props.activateFinalJeopardy(true)} style={{cursor: "pointer"}}/>) 
-            : <img src="/main_logo.jpeg" alt="Jeopardy Logo" className="jeopardy-logo"/>}
+            : props?.round1BoardEmpty ? <img src="/double_jeopardy.png" alt="Jeopardy Logo" className="jeopardy-logo"/> : <img src="/main_logo.jpeg" alt="Jeopardy Logo" className="jeopardy-logo"/>}
             
             <div className="team1-scores">
             <div className="team1-score">
