@@ -60,7 +60,7 @@ export default function App() {
         setTimeout(() => {
           InitBoard(round1Finished);
           SeedDailyDouble(round1Finished);
-        }, 1500)
+        }, 300)
       }
     }
   }, [video, round1Finished]);

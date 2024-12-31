@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import jeoopardyVideo from "../Jeopardy_Intro_Short.mp4";
+import jeoopardyVideo from "../Jeopardy_Intro_Short2.mp4";
 
 export default function IntroVideo(props) {
     return (
