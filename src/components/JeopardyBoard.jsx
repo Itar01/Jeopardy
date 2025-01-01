@@ -150,18 +150,23 @@ export function RenderClueControls(props) {
         <button onClick={() => { props.increaseScore(2, parseInt(team2DailyDoubleWager), false, true); }}>Team 2 Correct</button>
         <button onClick={() => { props.decreaseScore(2, parseInt(team2DailyDoubleWager), false, true); }}>Team 2 Incorrect</button>
       </div>
-      <div style={{marginTop: "130px"}}>
+      <div>
         <button onClick={() => props.closeWindow()}>Close</button>
       </div>
     </>
   ): (
     <>
-      <button onClick={() => { props.increaseScore(1, props.currentClue); }}>Team 1 Correct</button>
-      <button onClick={() => { props.increaseScore(2, props.currentClue); }}>Team 2 Correct</button>
-      <button onClick={() => { props.decreaseScore(1, props.currentClue); }}>Team 1 Incorrect</button>
-      <button onClick={() => { props.decreaseScore(2, props.currentClue); }}>Team 2 Incorrect</button>
-      <button onClick={() => props.closeWindow()}>Close</button>
+      <div>
+        <button onClick={() => { props.increaseScore(1, props.currentClue); }}>Team 1 Correct</button>
+        <button onClick={() => { props.increaseScore(2, props.currentClue); }}>Team 2 Correct</button>
+        <button onClick={() => { props.decreaseScore(1, props.currentClue); }}>Team 1 Incorrect</button>
+        <button onClick={() => { props.decreaseScore(2, props.currentClue); }}>Team 2 Incorrect</button>
+      </div>
+      <div>
+      </div>
+      <div>
+        <button onClick={() => props.closeWindow()}>Close</button>
+      </div>
     </>
-    
   )
 };

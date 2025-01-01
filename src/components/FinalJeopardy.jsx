@@ -45,7 +45,7 @@ export default function FinalJeopardy(props) {
                     <button onClick={() => props.onIncrease(2, team2FinalWager, false)}>Team 2 Correct</button>
                     <button onClick={() => props.onDecrease(2, team2FinalWager, false)}>Team 2 Incorrect</button>
                 </div>
-                <div style={{ marginTop: "120px" }}>
+                <div style={{ marginTop: "50px" }}>
                     <button onClick={() => props.disableFinalJeopardy()}>Close</button>
                 </div>
             </div>
