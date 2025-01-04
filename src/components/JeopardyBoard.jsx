@@ -58,7 +58,7 @@ export function InitBoard(round1Finished) {
         const clue = clues.splice(randomIndex, 1)[0];
 
         clue.style.backgroundImage = "unset";
-        clue.style.color = "#FFFF00";
+        clue.style.color = "#EFCAA0";
         if(round1Finished) {
           clue.style.pointerEvents = "auto";
         }

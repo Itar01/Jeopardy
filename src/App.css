@@ -9,11 +9,15 @@ body {
   text-align: center;
 }
 
+.scores-container {
+  margin-top: -24%;
+}
+
 .team1-scores {
   display: flex;
   margin-bottom: -75px;
   justify-content: left;
-  padding: 10px 102px 0px;
+  padding: 10px 160px 0px;
   color: #ffffff;
   font-size: 1.5em;
   font-weight: bold;
@@ -22,69 +26,90 @@ body {
 .team2-scores {
   display: flex;
   justify-content:right;
-  padding: 10px 102px 7px;
+  padding: 10px 160px 0px;
   color: #ffffff;
   font-size: 1.5em;
   font-weight: bold;
 }
 
 .team1-score {
-  background-color: #102e69;
   padding: 10px 50px 0px;
-  border: 2px solid #000;
-  border-radius: 5px;
 }
 
 .team2-score {
-  background-color: #102e69;
   padding: 10px 50px 0px;
-  border: 2px solid #000;
-  border-radius: 5px;
 }
 
 /* Header */
-.jeopardy-header {
-  background: #110a5b;
-  background-color: #110a5b;
-  color: white;
-  padding: 1px;
-}
 
 .jeopardy-logo {
-  object-fit: scale-down;
   object-position: center;
-  height: 234px;
-  width: 630px;
+  height: 95%;
+  width: 79%;
 }
 
+.final-jeopardy-header {
+  z-index: 400;
+  position: relative;
+  margin-top: -45%;
+  margin-left: 17.8%
+}
 
 /* Jeopardy Board */
+.jeopardy-board-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin-top: 14%;
+  margin-left: 17.5%;
+  overflow: hidden;
+}
+
+.jeopardy-board-background {
+  width: 100%;
+  height: 100%;
+  background-image: url('/clue_board.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .jeopardy-board {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  padding: 5px;
-  max-width: 1200px;
-  margin: auto;
-  background-color: #000000;
-  border: 5px solid #000000;
+  grid-template-columns: repeat(6, 13%);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 .category-column {
   display: flex;
-  gap: 15px;
   flex-direction: column;
 }
 
-.category-header {
-  background-color: #000099;
+.category-header, .clue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 153, 1.0);
   color: #fff;
-  height: 45px;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 20px;
-  border: 2px solid #000;
+  border: 4px solid #000;
   text-align: center;
+}
+
+.category-header {
+  height: 100%;
+  width: 100%;
+  font-size:1.7em;
+  font-weight: bold;
 }
 
 .clue {
@@ -92,24 +117,21 @@ body {
   background-size: cover;
   background-position: center;
   background-color: #000099;
-  font-size: 1.5em;
-  margin-top: 10px;
+  font-size: 3.0em;
   font-weight: bold;
   color: #ffffff00;
-  height: 35px;
-  width: 140px;
-  padding: 20px;
-  border: 2px solid #000;
+  height: 28.5%;
+  width: 100%;
   cursor: pointer;
-  text-align: center;
 }
 
 .clue:hover {
-  background-color: #003399;
+  background-color: rgba(0, 51, 153, 1.0);
 }
 
 /* Modal */
 .modal {
+  z-index: 2100;
   position: fixed;
   top: 0;
   left: 0;
@@ -122,6 +144,7 @@ body {
 }
 
 .modal-content {
+  z-index: 2000;
   display: grid;
   grid-template-rows: repeat(7, 1fr);
   background-color: #000099;
@@ -136,11 +159,12 @@ body {
 
 .modal-content h1 {
   margin-top: 10px;
+  font-size: calc(2.5em + 0.5vw);
 }
 
 .modal-content p {
   margin-top: 40px;
-  font-size: calc(1.5em + 0.5vw);
+  font-size: calc(2.0em + 0.5vw);
   font-weight: bold;
 }
 
@@ -163,6 +187,7 @@ body {
 }
 
 .video-modal {
+  z-index: 3000;
   position: fixed;
   top: 0;
   left: 0;
@@ -173,8 +198,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-
 
 .daily-double-modal {
   z-index: 1200;
@@ -312,7 +335,6 @@ body {
   max-height: 25px;
   background-color: #ffffff;
 }
-
 
 .daily-double-response-area1 {
   display: grid;

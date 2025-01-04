@@ -154,10 +154,11 @@ export default function App() {
       <IntroVideo videoEnded={(choice) => RemoveVideo(choice, setVideo, setDailyDouble)}/>
       {dailyDouble && (<DailyDoubleVideo videoEnded={(choice) => RemoveVideo(choice, setVideo, setDailyDouble)}/>)}
       {isFinalJeopardy && <FinalJeopardy team1CurrentScore={team1Score} team2CurrentScore={team2Score} disableFinalJeopardy={() => setIsFinalJeopardy(false)} onIncrease={(team, finalWager, performActions) => handleIncreaseScore(team, finalWager, performActions)} onDecrease={(team, finalWager, performActions) => handleDecreaseScore(team, finalWager, performActions)}/>}
-
-      <div className="App">
-        <JeopardyHeader team1CurrentScore={team1Score} team2CurrentScore={team2Score} round1BoardEmpty={round1Finished} round2BoardEmpty={round2Finished} activateFinalJeopardy={(state) => setIsFinalJeopardy(state)}/>
-        <JeopardyBoard round1Done={round1Finished} processClue={(category, value, catIndex, clueIndex) => handleClueClick(category, value, catIndex, clueIndex)}/>
+      <div className="jeopardy-board-background">
+        <div className="jeopardy-board-container">
+          <JeopardyBoard round1Done={round1Finished} processClue={(category, value, catIndex, clueIndex) => handleClueClick(category, value, catIndex, clueIndex)}/>
+        </div>
+        <JeopardyHeader team1CurrentScore={team1Score} team2CurrentScore={team2Score} round1BoardEmpty={round1Finished} round2BoardEmpty={round2Finished}/>
         {selectedClue && (
           <div className="modal">
             <div className="modal-content">
@@ -166,6 +167,9 @@ export default function App() {
             </div>
           </div>
         )}
+        <div className="final-jeopardy-header">
+          {round2Finished ?  (<img src="/final_jeopardy.jpg" alt="Jeopardy Logo" className="jeopardy-logo" onClick={() => setIsFinalJeopardy(true)} style={{cursor: "pointer"}}/>) : null}
+        </div>
       </div>
     </>
   );

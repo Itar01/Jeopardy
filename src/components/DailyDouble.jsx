@@ -6,7 +6,7 @@ import { JEOPARDY_QUESTIONS, CLUES, CLUES2, JEOPARDY_CATEGORIES, DOUBLE_JEOPARDY
 export function DailyDoubleVideo(props) {
     return (
         <div className="daily-double-modal">
-          <video src={dailyDoubleVideo} autoPlay onClick={() => props.videoEnded(2)} />
+          <video height="95%" width="95%" src={dailyDoubleVideo} autoPlay onClick={() => props.videoEnded(2)} />
         </div>
     )
 };
