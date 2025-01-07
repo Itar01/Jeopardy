@@ -40,6 +40,27 @@ export function JeopardyBoard(props) {
     )
 }
 
+export function InitCategories() {
+  const categoriesDiv = document.querySelectorAll('.category-header');
+  const categories = [];
+
+  categoriesDiv.forEach(category => {
+    categories.push(category);
+  })
+
+  const revealNextCategory = () => {
+    if(categories.length === 0) return;
+
+    const selectedCategory = categories.splice(0, 1)[0];
+    selectedCategory.style.backgroundImage = "unset";
+    selectedCategory.style.color = "#fff";
+
+    setTimeout(revealNextCategory, 2000);
+  }
+
+  revealNextCategory();
+}
+
 export function InitBoard(round1Finished) {
     const audio = new Audio(boardAudio);
     audio.play();

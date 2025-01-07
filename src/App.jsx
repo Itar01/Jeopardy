@@ -5,7 +5,7 @@ import IntroVideo from "./components/IntroVideo";
 import {DailyDoubleVideo, SeedDailyDouble, GetDailyDoubleDecision} from "./components/DailyDouble";
 import FinalJeopardy from "./components/FinalJeopardy";
 import JeopardyHeader from "./components/JeopardyHeader";
-import {JeopardyBoard, InitBoard, HandleDisableClue, GetQuestionForClue, RemoveVideo, RenderClueControls} from "./components/JeopardyBoard";
+import {JeopardyBoard, InitCategories, InitBoard, HandleDisableClue, GetQuestionForClue, RemoveVideo, RenderClueControls} from "./components/JeopardyBoard";
 
 export default function App() {
   // #region Constants
@@ -47,20 +47,31 @@ export default function App() {
     if (!video || round1Finished === true) {
 
       if(round1Finished === true) {
+        document.querySelectorAll(".category-header").forEach(category => {
+          category.style.backgroundImage = 'url("/jeopardy_category.png")';
+          category.style.color = "#ffffff00"
+        });
+
         document.querySelectorAll('.clue').forEach(clue => {
           clue.style.backgroundImage = 'url("/double_jeopardy.png")';
           clue.style.color = "#ffffff00"
         });
 
         setTimeout(() => {
-          InitBoard(round1Finished);
-          SeedDailyDouble(round1Finished);
-        }, 2500)
-      } else {
+          InitCategories();
+        }, 300);
         setTimeout(() => {
           InitBoard(round1Finished);
           SeedDailyDouble(round1Finished);
-        }, 300)
+        }, 11500)
+      } else {
+        setTimeout(() => {
+          InitCategories();
+        }, 300);
+        setTimeout(() => {
+          InitBoard(round1Finished);
+          SeedDailyDouble(round1Finished);
+        }, 11500)
       }
     }
   }, [video, round1Finished]);
