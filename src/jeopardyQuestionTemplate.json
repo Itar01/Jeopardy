@@ -1,0 +1,43 @@
+[
+    {
+        "category": "",
+
+        "questions": [
+            {
+                "points": 200,
+                "fontColor": "#f5de50",
+                "question": "",
+                "answer": "",
+                "isDailyDouble": false
+            },
+            {
+                "points": 400,
+                "fontColor": "#f5de50",
+                "question": "",
+                "answer": "",
+                "isDailyDouble": false
+            },
+            {
+                "points": 600,
+                "fontColor": "#f5de50",
+                "question": "",
+                "answer": "",
+                "isDailyDouble": false
+            },
+            {
+                "points": 800,
+                "fontColor": "#f5de50",
+                "question": "",
+                "answer": "",
+                "isDailyDouble": false
+            },
+            {
+                "points": 1000,
+                "fontColor": "#f5de50",
+                "question": "",
+                "answer": "",
+                "isDailyDouble": false
+            }
+        ]
+    }
+]
